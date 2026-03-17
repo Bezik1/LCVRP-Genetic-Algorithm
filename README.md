@@ -15,22 +15,14 @@ In case of path error, modify the `ProblemLoader::BASE_PATH`,
 `ProblemLoader::BASE_EXTENSION`, folderName or instanceName parameters.
 
 ```bash
-## Create output directory (once)
-mkdir -p bin
+# Initialize build directory
+cmake -S . -B build
 
-## Build Command
-/usr/bin/clang++ -std=c++14 -g \
-src/main.cpp \
-src/core/Evaluator/Evaluator.cpp \
-src/core/GeneticAlgorithm/GeneticAlgorithm.cpp \
-src/core/Optimizer/Optimizer.cpp \
-src/core/Individual/Individual.cpp \
-src/core/ProblemData/ProblemData.cpp \
-src/core/ProblemLoader/ProblemLoader.cpp \
--o bin/main
+# Builds project
+cmake --build build --target main
 
-## Run Command
-./bin/main
+# Run project
+./build/main
 ```
 
 ## Parameters
