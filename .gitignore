@@ -2,6 +2,9 @@
 /build
 /data
 
+docs/html
+docs/latex
+
 main
 
 */main.dSYM
